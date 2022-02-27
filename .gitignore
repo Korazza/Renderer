@@ -8,6 +8,7 @@
 *.obj
 
 # Precompiled Headers
+include
 *.gch
 *.pch
 
@@ -21,12 +22,16 @@
 *.smod
 
 # Compiled Static libraries
+lib
 *.lai
 *.la
 *.a
 *.lib
 
 # Executables
+bin
 *.exe
 *.out
 *.app
+
+imgui.ini
