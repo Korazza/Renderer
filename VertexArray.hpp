@@ -1,5 +1,5 @@
-#ifndef VERTEXARRAY_CLASS_HPP
-#define VERTEXARRAY_CLASS_HPP
+#ifndef VERTEXARRAY_HPP
+#define VERTEXARRAY_HPP
 
 #include "include/glad/glad.h"
 
@@ -9,12 +9,16 @@ class VertexArray
 {
 public:
   GLuint ID;
+
+public:
   VertexArray();
 
   void LinkAttrib(VertexBuffer &VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void *offset);
 
   void Bind();
+
   void Unbind();
+
   void Delete();
 };
 

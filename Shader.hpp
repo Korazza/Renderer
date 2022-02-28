@@ -1,5 +1,5 @@
-#ifndef SHADER_CLASS_HPP
-#define SHADER_CLASS_HPP
+#ifndef SHADER_HPP
+#define SHADER_HPP
 
 #include "include/glad/glad.h"
 #include <string>
@@ -14,14 +14,18 @@ class Shader
 {
 public:
   GLuint ID;
-  Shader(const char *vertexFile, const char *fragmentFile);
-  Shader(const char *vertexFile, const char *fragmentFile, const char *geometryFile);
-
-  void Activate();
-  void Delete();
 
 private:
   void compileErrors(unsigned int shader, const char *type);
+
+public:
+  Shader(const char *vertexFile, const char *fragmentFile);
+
+  Shader(const char *vertexFile, const char *fragmentFile, const char *geometryFile);
+
+  void Activate();
+
+  void Delete();
 };
 
 #endif

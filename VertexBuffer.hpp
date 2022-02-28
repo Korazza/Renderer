@@ -1,5 +1,5 @@
-#ifndef VERTEXBUFFER_CLASS_H
-#define VERTEXBUFFER_CLASS_H
+#ifndef VERTEXBUFFER_HPP
+#define VERTEXBUFFER_HPP
 
 #include "include/glm/glm.hpp"
 #include "include/glad/glad.h"
@@ -17,11 +17,16 @@ class VertexBuffer
 {
 public:
   GLuint ID;
+
+public:
   VertexBuffer(std::vector<Vertex> &vertices);
+
   VertexBuffer(std::vector<glm::mat4> &matrices4);
 
   void Bind();
+
   void Unbind();
+
   void Delete();
 };
 
