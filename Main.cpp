@@ -119,7 +119,6 @@ public:
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     io = ImGui::GetIO();
-    (void)io;
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(glfwWindow, true);
     ImGui_ImplOpenGL3_Init("#version 330");
@@ -131,9 +130,10 @@ public:
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
+    // FIXME: skip camera input on imgui not working
     if (!io.WantCaptureMouse)
       camera->Inputs(glfwWindow);
-    camera->UpdateMatrix(45.0f, 0.1f, 1000.0f);
+    camera->UpdateMatrix(45.0f, 0.01f, 1000.0f);
 
     jupiter->Draw(*shaderProgram, *camera);
 
