@@ -19,6 +19,8 @@ private:
   void compileErrors(unsigned int shader, const char *type);
 
 public:
+  Shader() = default;
+
   Shader(const char *vertexFile, const char *fragmentFile);
 
   Shader(const char *vertexFile, const char *fragmentFile, const char *geometryFile);
