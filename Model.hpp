@@ -31,7 +31,9 @@ private:
   std::vector<unsigned char> getData();
 
   std::vector<float> getFloats(json accessor);
+
   std::vector<GLuint> getIndices(json accessor);
+
   std::vector<Texture> getTextures();
 
   std::vector<Vertex> assembleVertices(
@@ -40,10 +42,14 @@ private:
       std::vector<glm::vec2> textureUVs);
 
   std::vector<glm::vec2> groupFloatsVec2(std::vector<float> floatVec);
+
   std::vector<glm::vec3> groupFloatsVec3(std::vector<float> floatVec);
+
   std::vector<glm::vec4> groupFloatsVec4(std::vector<float> floatVec);
 
 public:
+  Model() = default;
+
   Model(const char *file,
         unsigned int instancing = 1,
         std::vector<glm::mat4> instanceMatrix = {});
