@@ -130,7 +130,7 @@ public:
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
-    // FIXME: skip camera input on imgui not working
+    // FIXME: Skipping camera input on imgui frames not working
     if (!io.WantCaptureMouse)
       camera->Inputs(glfwWindow);
     camera->UpdateMatrix(45.0f, 0.01f, 1000.0f);
@@ -149,7 +149,7 @@ public:
     glDrawArrays(GL_TRIANGLES, 0, 6); */
 
     ImGui::Begin("Settings");
-    // TODO: add settings
+    // TODO: Add settings
     ImGui::End();
 
     ImGui::Render();
