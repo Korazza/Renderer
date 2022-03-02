@@ -1,11 +1,11 @@
 #include <iostream>
 #include <math.h>
-#include "include/imgui/imgui.h"
-#include "include/imgui/imgui_impl_glfw.h"
-#include "include/imgui/imgui_impl_opengl3.h"
+#include "renderer/include/imgui/imgui.h"
+#include "renderer/include/imgui/imgui_impl_glfw.h"
+#include "renderer/include/imgui/imgui_impl_opengl3.h"
 
-#include "Application.hpp"
-#include "Model.hpp"
+#include "renderer/Application.hpp"
+#include "renderer/Model.hpp"
 
 unsigned int width{900};
 unsigned int height{900};
