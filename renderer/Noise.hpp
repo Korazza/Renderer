@@ -36,7 +36,7 @@ protected:
   static double grad(int hash, double x, double y, double z = 0);
 
 public:
-  static double Perlin(double x, double y, double z);
+  static double Perlin(double x, double y, double z = 0);
 };
 
 #endif
