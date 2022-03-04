@@ -32,23 +32,23 @@ double Noise::Perlin(double x, double y, double z)
   int A{Noise::p[X] + Y}, AA{Noise::p[A] + Z}, AB{Noise::p[A + 1] + Z},
       B{Noise::p[X + 1] + Y}, BA{Noise::p[B] + Z}, BB{Noise::p[B + 1] + Z};
 
-  return lerp(
-      lerp(
-          lerp(
+  return std::lerp(
+      std::lerp(
+          std::lerp(
               Noise::grad(Noise::p[AA], x, y, z),
               Noise::grad(Noise::p[BA], x - 1, y, z),
               u),
-          lerp(
+          std::lerp(
               Noise::grad(Noise::p[AB], x, y - 1, z),
               Noise::grad(Noise::p[BB], x - 1, y - 1, z),
               u),
           v),
-      lerp(
-          lerp(
+      std::lerp(
+          std::lerp(
               Noise::grad(Noise::p[AA + 1], x, y, z - 1),
               Noise::grad(Noise::p[BA + 1], x - 1, y, z - 1),
               u),
-          lerp(
+          std::lerp(
               Noise::grad(Noise::p[AB + 1], x, y - 1, z - 1),
               Noise::grad(Noise::p[BB + 1], x - 1, y - 1, z - 1),
               u),
