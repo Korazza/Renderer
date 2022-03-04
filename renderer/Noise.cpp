@@ -23,12 +23,15 @@ double Noise::Perlin(double x, double y, double z)
   int X{(int)floor(x) & 255},
       Y{(int)floor(y) & 255},
       Z{(int)floor(z) & 255};
+
   x -= floor(x);
   y -= floor(y);
   z -= floor(z);
+
   double u{Noise::fade(x)},
       v{Noise::fade(y)},
       w{Noise::fade(z)};
+
   int A{Noise::p[X] + Y}, AA{Noise::p[A] + Z}, AB{Noise::p[A + 1] + Z},
       B{Noise::p[X + 1] + Y}, BA{Noise::p[B] + Z}, BB{Noise::p[B + 1] + Z};
 
