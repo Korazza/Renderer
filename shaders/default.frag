@@ -21,7 +21,7 @@ vec4 pointLight()
   float b = 0.5f;
   float intensity = 1.0f / (a * dist * dist + b * dist + 1.0f);
 
-  float ambient = 0.20f;
+  float ambient = 0.10f;
 
   vec3 normal = normalize(Normal);
   vec3 lightDirection = normalize(lightVec);
@@ -43,7 +43,7 @@ vec4 pointLight()
 
 vec4 directionalLight()
 {
-  float ambient = 0.20f;
+  float ambient = 0.10f;
 
   vec3 normal = normalize(Normal);
   vec3 lightDirection = normalize(vec3(1.0f, 1.0f, 0.0f));
@@ -63,7 +63,7 @@ vec4 spotLight()
   float outerCone = 0.90f;
   float innerCone = 0.95f;
 
-  float ambient = 0.20f;
+  float ambient = 0.10f;
 
   vec3 normal = normalize(Normal);
   vec3 lightDirection = normalize(lightPos - crntPos);
