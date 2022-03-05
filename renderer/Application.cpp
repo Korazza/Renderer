@@ -32,9 +32,12 @@ void Application::SetBackgroundColor(Color backgroundColor)
   Application::backgroundColor = backgroundColor;
 }
 
-void Application::Init(const int versionMajor, const int versionMinor)
+void Application::Init(
+  const int versionMajor,
+  const int versionMinor,
+  const unsigned int samples)
 {
-  window.Init(versionMajor, versionMinor);
+  window.Init(versionMajor, versionMinor, samples);
 }
 
 void Application::Run()

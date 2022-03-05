@@ -30,7 +30,10 @@ public:
 
   GLFWwindow *GetGlfwWindow();
 
-  void Init(const int versionMajor, const int versionMinor);
+  void Init(
+      const int versionMajor,
+      const int versionMinor,
+      const unsigned int samples);
 };
 
 #endif

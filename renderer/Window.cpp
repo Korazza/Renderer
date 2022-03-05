@@ -14,11 +14,13 @@ Window::Window(
   Window::VSync = VSync;
 }
 
-unsigned int Window::GetWidth() {
+unsigned int Window::GetWidth()
+{
   return width;
 }
 
-unsigned int Window::GetHeight() {
+unsigned int Window::GetHeight()
+{
   return height;
 }
 
@@ -27,13 +29,17 @@ GLFWwindow *Window::GetGlfwWindow()
   return glfwWindow;
 }
 
-void Window::Init(const int versionMajor, const int versionMinor)
+void Window::Init(
+    const int versionMajor,
+    const int versionMinor,
+    const unsigned int samples)
 {
   if (!glfwInit())
     std::runtime_error("Could not initialize GLFW");
 
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, versionMajor);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, versionMinor);
+  glfwWindowHint(GLFW_SAMPLES, samples);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   Window::glfwWindow = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);

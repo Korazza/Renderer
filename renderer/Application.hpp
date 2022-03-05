@@ -27,7 +27,10 @@ public:
 
   void SetBackgroundColor(Color backgroundColor);
 
-  void Init(const int versionMajor = 3, const int versionMinor = 3);
+  void Init(
+      const int versionMajor = 3,
+      const int versionMinor = 3,
+      const unsigned int samples = 8);
 
   void Run();
 
